@@ -1,4 +1,3 @@
-// departmentController.js
 const departmentService = require('../services/departmentService');
 
 const getAllDepartments = async (req, res, next) => {
