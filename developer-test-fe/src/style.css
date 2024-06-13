@@ -1,0 +1,91 @@
+@keyframes Faded {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.faded {
+    animation: Faded 1.5s ease-out forwards;
+}
+
+@keyframes BToT {
+    from {
+        opacity: 0;
+        transform: translatey(40%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translatey(0)
+    }
+}
+
+.BTT {
+    animation: BToT 1.5s ease-out forwards;
+}
+
+
+.h {
+    background-image: linear-gradient(to right,
+            rgba(3, 59, 63, 0.425),
+            rgb(28, 156, 118) 50%,
+            rgb(49, 151, 149) 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.h:before {
+    content: '';
+    background: rgb(49, 151, 149);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.h:hover {
+    background-position: 0;
+}
+
+.h:hover::before {
+    width: 100%;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 70%
+    }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 4s steps(40, end);
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
